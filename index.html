@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NetWatch — Network Security & Optimization</title>
+  <title>NetWatch | Network Security & Optimization</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/netwatch.css" />
@@ -88,6 +88,7 @@
     <ul class="nav-links">
       <li><a href="services.html">Services</a></li>
       <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="why.html">Why NetWatch?</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Get Started</a></li>
     </ul>
@@ -99,16 +100,17 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="services.html" onclick="toggleMenu()">Services</a>
     <a href="index.html#how-it-works" onclick="toggleMenu()">How It Works</a>
+    <a href="why.html" onclick="toggleMenu()">Why NetWatch?</a>
     <a href="about.html" onclick="toggleMenu()">About</a>
     <a href="contact.html" class="nav-cta" onclick="toggleMenu()">Get Started</a>
   </div>
 
   <section class="hero">
-    <p class="hero-eyebrow">Network Security &amp; Optimization — SOHO Specialists</p>
+    <p class="hero-eyebrow">Network Security &amp; Optimization | SOHO Specialists</p>
     <h1>Your network deserves<br />a <em>check engine light.</em></h1>
     <p class="hero-sub">
-      Your router tells you one thing: whether the internet is working.
-      NetWatch tells you everything else — what's on your network, what it's doing,
+      Your router tells you one thing: whether the internet is working <u>at the modem</u>.
+      NetWatch tells you everything else: what devices are on your network, what they're doing,
       and when something is wrong.
     </p>
     <div class="hero-actions">
@@ -120,11 +122,11 @@
   <div class="stat-strip">
     <div class="stat-strip-inner">
       <div class="stat-item">
-        <span class="stat-value">47+</span>
+        <span class="stat-value">30+</span>
         <span class="stat-label">Devices on a typical home network</span>
       </div>
       <div class="stat-item">
-        <span class="stat-value">0</span>
+        <span class="stat-value">0%</span>
         <span class="stat-label">Visibility your router provides</span>
       </div>
       <div class="stat-item">
@@ -133,7 +135,7 @@
       </div>
       <div class="stat-item">
         <span class="stat-value">24/7</span>
-        <span class="stat-label">Passive monitoring, no ongoing intervention</span>
+        <span class="stat-label">Monitoring & Detection</span>
       </div>
     </div>
   </div>
@@ -143,26 +145,30 @@
       <div class="why-strip-content">
         <p class="why-strip-label">Why it matters</p>
         <p class="why-strip-text">
-          Most home networks have 40+ devices, zero visibility, and no way to know when something's wrong.
-          Your router has one job: keep the internet on. Everything else — what's connected, what it's doing,
-          whether it should be — is invisible.
+          Most home networks have 30+ devices but zero visibility, providing no way to know when something's wrong.
+          Your ISP modem has only one job: keep the internet on. Everything else such as identifying what's connected, what they're doing,
+          whether they should be doing it, and more is all invisible to you.
         </p>
       </div>
-      <a href="why.html" class="why-strip-link">See the full picture →</a>
+      <a href="why.html" class="why-strip-link">See the full picture & why NetWatch is crucial →</a>
     </div>
   </div>
 
   <div class="divider"></div>
 
+   <div style="max-width: 800px; margin: 0 auto; padding: 2rem 2rem 0;">
+  <img src="assets/nwa.png" alt="NetWatch dashboard overview" style="width: 100%; height: auto; border-radius: 4px; display: block;" />
+</div>
+  
   <section class="section" id="how-it-works">
     <p class="section-label">The Engagement Model</p>
     <h2>A process, not just a product.</h2>
     <p class="section-intro">
       NetWatch services build on each other in a deliberate sequence.
-      We don't skip steps — and neither should you. Here's the chain,
-      and where you enter it.
+      We don't believe in shortcuts or skip steps, and neither should you. Here's the chain,
+      so we can determine where you enter it.
     </p>
-    <img src="assets/nwa.png"> <br>
+  
 
     <div class="tier-flow">
 
@@ -179,9 +185,9 @@
           <div class="tier-body-inner">
             <p class="tier-desc">
               Every engagement starts here. Before security monitoring is relevant, your network
-              needs to actually work — at the speed and consistency your ISP is providing.
+              needs to actually work at the speed and consistency your ISP is providing.
               Weak coverage, channel interference, router placement, and ISP equipment issues
-              are common and fixable. We find them first.
+              are common and fixable. This is the starting point. 
             </p>
             <div class="tier-services">
               <div class="tier-service"><span class="tier-service-dot"></span>Throughput testing vs. plan speed</div>
@@ -224,7 +230,7 @@
           <div class="tier-body-inner">
             <p class="tier-desc">
               With a verified foundation, we build the infrastructure layer tailored to your environment.
-              Services here are mix-and-match based on audit findings — not every client needs every component,
+              Services here are mix-and-match based on audit findings, as not every client needs every component,
               but every component builds on the connectivity work that came before.
             </p>
             <div class="tier-services">
@@ -259,13 +265,14 @@
         <div class="tier-body">
           <div class="tier-body-inner">
             <p class="tier-desc">
-              DNS is the address book of the internet — every connection your devices make starts with a DNS query.
+              DNS is the address book of the internet, because every connection your devices make starts with a DNS query.
               Deploying a local recursive resolver means no third-party DNS provider sees your queries,
               every device on your network is covered whether it wants to be or not, and known-bad domains
               are blocked before a connection is ever attempted.
-              This tier is a meaningful standalone deployment — and it feeds the NetWatch dashboard
-              with DNS telemetry when Tier 4 follows.
-            </p>
+              This tier is a meaningful standalone deployment and it feeds the NetWatch dashboard
+              with DNS telemetry, when Tier 4 follows. You are not <b>required</b> to implement Tier 4 in order to reap the benefits of Tier 3, several 
+              Clients have seen the benefits of DNS privacy and security. 
+          </p>
             <div class="tier-services">
               <div class="tier-service"><span class="tier-service-dot"></span>Pi-hole network-wide ad &amp; tracker blocking</div>
               <div class="tier-service"><span class="tier-service-dot"></span>Unbound fully recursive resolver</div>
@@ -276,9 +283,9 @@
             </div>
             <div class="tier-note">
               <strong>Note:</strong> Tier 4 (NetWatch) can be deployed without a DNS layer, but the picture
-              it gives you is less complete. DNS telemetry is one of the most revealing data sources in the
-              dashboard — it's what tells you an Echo Dot tried to bypass your resolver 40 times today.
-              We recommend Tier 3 first, but won't force it.
+              it gives you is less complete. DNS telemetry is an important data source in the
+              dashboard, as it's what tells you an Echo Dot tried to bypass your resolver 40 times today.
+              We recommend Tier 3 first, but <b>it is not required for Tier 4.</b> 
             </div>
           </div>
         </div>
@@ -304,13 +311,13 @@
         <div class="tier-body">
           <div class="tier-body-inner">
             <p class="tier-desc">
-              NetWatch is a purpose-built <strong>detection platform</strong> — not a prevention system.
+              NetWatch is a purpose-built <strong>detection platform</strong>, it is not a prevention system.
               It passively watches every packet via SPAN port mirroring without sitting inline,
               meaning it generates no performance impact and cannot intercept, block, or modify traffic.
               What it does is give you complete visibility into what your network is actually doing:
-              every connection, every external IP, every anomalous behavior pattern — unified in a
+              every connection, every external IP, every anomalous behavior pattern and brings them all together in a
               single operational dashboard alongside your DNS telemetry.
-              You see everything. You own the hardware. The data never leaves your network.
+              You see everything. You own the hardware. The data never leaves your network. There is no cloud, there is no third-party data collection.
             </p>
             <div class="tier-services">
               <div class="tier-service"><span class="tier-service-dot"></span>Suricata IDS — signature &amp; heuristic detection</div>
@@ -323,12 +330,14 @@
               <div class="tier-service"><span class="tier-service-dot"></span>Client-owned hardware, full data sovereignty</div>
             </div>
             <div class="tier-note-teal">
-              <strong>Detection, not prevention.</strong> NetWatch tells you what's happening —
-              it does not stop it. That's an honest limitation and an important one to understand
-              before deployment. The value is visibility: knowing a device is behaving abnormally,
-              that traffic is going somewhere it shouldn't, that something needs your attention.
+              <strong>Detection, not prevention.</strong> An important thing to understand prior to deployment
+              is that NetWatch tells you what's happening, but it does not stop it. The value is visibility: 
+              knowing a device is behaving abnormally,
+              that traffic is going somewhere it shouldn't, or that something needs your attention.
               What happens next is a conversation. Operator-assisted remote response is on the roadmap
-              for clients who want a human in the loop when an alert fires.
+              for clients who want a human in the loop when an alerts fire, to provide insight into whether
+              anomalous behavior is a false positive and requires rule refinement, or is a true incident and what steps
+              are required to secure your systems and network.
             </div>
           </div>
         </div>
@@ -343,8 +352,8 @@
         <h2>Not sure <em>where you enter</em> the process?</h2>
         <p>
           That's exactly what a free consultation is for. We'll talk through your current setup,
-          what you're trying to protect, and what tier actually makes sense for you —
-          no sales pressure, no commitment.
+          what you're trying to protect, and what tier actually makes sense for you with
+          no sales pressure and no commitment.
         </p>
       </div>
       <div class="cta-actions">
