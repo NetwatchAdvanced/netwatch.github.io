@@ -1,0 +1,6 @@
+# NetWatch
+# Search engine indexing is intentionally disabled.
+# This site is not intended for public discovery at this time.
+
+User-agent: *
+Disallow: /
