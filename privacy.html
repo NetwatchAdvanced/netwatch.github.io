@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — NetWatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/netwatch.css" />
+
+  <style>
+    /* ── PRIVACY: CONTENT ── */
+    .privacy-content {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .privacy-content h2 {
+      font-family: var(--head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    .privacy-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .privacy-content p {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .privacy-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-content strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .privacy-content ul {
+      list-style: none;
+      margin: 0.5rem 0 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .privacy-content ul li {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .privacy-content ul li::before {
+      content: '▸';
+      color: var(--teal-dim);
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+
+    .privacy-section-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+
+    .privacy-meta {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .privacy-content { padding: 2rem 1.5rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">[</span>NET<span>WATCH</span><span class="logo-bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="index.html#how-it-works" onclick="toggleMenu()">How It Works</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="contact.html" class="nav-cta" onclick="toggleMenu()">Get Started</a>
+  </div>
+
+  <div style="max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 0;">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span style="color: var(--text-muted);">Privacy Policy</span>
+    </div>
+  </div>
+
+  <div class="page-header" style="padding-bottom: 1rem;">
+    <p class="page-eyebrow">Privacy Policy</p>
+    <h1>What this site <em>does and doesn't collect.</em></h1>
+    <p class="lead">
+      NetWatch is a privacy and security service. This site is held to the same
+      standard. Plain language, no ambiguity.
+    </p>
+  </div>
+
+  <div class="divider-full"></div>
+
+  <div class="privacy-content">
+
+    <p class="privacy-meta">Last updated: 2026 — This policy applies to the NetWatch website only.
+    For the data practices of the NetWatch monitoring application deployed on client networks,
+    see the service agreement provided at time of deployment.</p>
+
+    <h2>This website</h2>
+    <p>
+      The NetWatch website (<strong>this site</strong>) does not use analytics tracking,
+      advertising scripts, or third-party cookies of any kind. No tracking pixels,
+      no session recording, no behavioral profiling. What you read here stays between
+      you and your browser.
+    </p>
+    <p>
+      The site is hosted on GitHub Pages. GitHub may collect standard server access logs
+      (IP address, browser type, pages visited, timestamps) as part of normal hosting
+      infrastructure. This is outside NetWatch's control — GitHub's privacy policy
+      governs that data. NetWatch does not receive, store, or process those logs.
+    </p>
+
+    <div class="privacy-section-divider"></div>
+
+    <h2>Contact and consultation requests</h2>
+    <p>
+      If you contact NetWatch by email, the information you provide — your name,
+      email address, and any details about your network or setup — is used solely
+      to respond to your inquiry and, if you proceed, to scope and deliver services.
+      It is not shared with third parties, used for marketing, or retained beyond
+      the active client relationship.
+    </p>
+    <p>
+      Email is currently handled through Proton Mail. Proton's end-to-end encryption
+      applies to Proton-to-Proton communication. For other providers, standard email
+      security applies.
+    </p>
+
+    <div class="privacy-section-divider"></div>
+
+    <h2>NetWatch application — client deployments</h2>
+    <p>
+      The NetWatch monitoring application, when deployed on a client network, collects
+      the following data locally on the client's hardware:
+    </p>
+    <ul>
+      <li>Network traffic metadata — source and destination IPs, ports, protocols, timestamps</li>
+      <li>Suricata IDS alert events and signatures matched</li>
+      <li>DNS query logs — domains queried, query types, allow/block status, per-device history</li>
+      <li>Device inventory — IP addresses, MAC addresses, assigned device names, first/last seen</li>
+      <li>Geographic connection data — resolved locally via a local database, no external API calls</li>
+    </ul>
+    <p>
+      <strong>All data remains on the client's hardware.</strong> Nothing is transmitted
+      to NetWatch servers or any third party. The operator accesses client dashboards
+      remotely via Tailscale for support and monitoring purposes — this access is
+      scoped to the NetWatch application and does not involve copying or retaining
+      client network data offsite.
+    </p>
+    <p>
+      On service termination, the client retains full ownership of all data on their
+      hardware. NetWatch retains no copy of client network data after the engagement ends.
+    </p>
+
+    <div class="privacy-section-divider"></div>
+
+    <h2>Cookies</h2>
+    <p>
+      This website does not set cookies. No consent banner is required or displayed
+      because there is nothing to consent to.
+    </p>
+
+    <div class="privacy-section-divider"></div>
+
+    <h2>Children's privacy</h2>
+    <p>
+      This site and service are directed at adults making decisions about their
+      home or small office networks. NetWatch does not knowingly collect information
+      from anyone under 18.
+    </p>
+
+    <div class="privacy-section-divider"></div>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy changes materially, the updated version will be posted here
+      with a revised date. Active clients will be notified directly.
+    </p>
+
+    <div class="privacy-section-divider"></div>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy can be directed to
+      <a href="mailto:netwatch@protonmail.com"
+         style="color: var(--teal); text-decoration: none; border-bottom: 1px solid var(--teal-dim);">
+        netwatch@protonmail.com
+      </a>.
+    </p>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">[NET<span>WATCH</span>]</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why.html">Why NetWatch</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2026 NetWatch — All rights reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.nav-hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
+</html>

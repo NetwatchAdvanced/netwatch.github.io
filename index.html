@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetWatch — Network Security & Optimization</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/netwatch.css" />
+
+  <style>
+    /* ── INDEX: HERO ── */
+    .hero {
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    .hero h1 {
+      font-family: var(--head);
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      max-width: 840px;
+      animation: fadeUp 0.5s 0.1s ease both;
+    }
+
+    .hero h1 em { font-style: normal; color: var(--teal); }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin-bottom: 3rem;
+      font-weight: 300;
+      line-height: 1.8;
+      animation: fadeUp 0.5s 0.2s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      animation: fadeUp 0.5s 0.3s ease both;
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">[</span>NET<span>WATCH</span><span class="logo-bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="index.html#how-it-works" onclick="toggleMenu()">How It Works</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="contact.html" class="nav-cta" onclick="toggleMenu()">Get Started</a>
+  </div>
+
+  <section class="hero">
+    <p class="hero-eyebrow">Network Security &amp; Optimization — SOHO Specialists</p>
+    <h1>Your network deserves<br />a <em>check engine light.</em></h1>
+    <p class="hero-sub">
+      Your router tells you one thing: whether the internet is working.
+      NetWatch tells you everything else — what's on your network, what it's doing,
+      and when something is wrong.
+    </p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-primary">Book a Free Consultation</a>
+      <a href="#how-it-works" class="btn-ghost">See How It Works ↓</a>
+    </div>
+  </section>
+
+  <div class="stat-strip">
+    <div class="stat-strip-inner">
+      <div class="stat-item">
+        <span class="stat-value">47+</span>
+        <span class="stat-label">Devices on a typical home network</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">0</span>
+        <span class="stat-label">Visibility your router provides</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">34%</span>
+        <span class="stat-label">Avg. DNS queries blocked after deployment</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">24/7</span>
+        <span class="stat-label">Passive monitoring, no ongoing intervention</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-strip">
+    <div class="why-strip-inner">
+      <div class="why-strip-content">
+        <p class="why-strip-label">Why it matters</p>
+        <p class="why-strip-text">
+          Most home networks have 40+ devices, zero visibility, and no way to know when something's wrong.
+          Your router has one job: keep the internet on. Everything else — what's connected, what it's doing,
+          whether it should be — is invisible.
+        </p>
+      </div>
+      <a href="why.html" class="why-strip-link">See the full picture →</a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <section class="section" id="how-it-works">
+    <p class="section-label">The Engagement Model</p>
+    <h2>A process, not a product menu.</h2>
+    <p class="section-intro">
+      NetWatch services build on each other in a deliberate sequence.
+      We don't skip steps — and neither should you. Here's the chain,
+      and where you enter it.
+    </p>
+
+    <div class="tier-flow">
+
+      <div class="tier" id="tier1" onclick="toggleTier('tier1')">
+        <div class="tier-header">
+          <div class="tier-num">01</div>
+          <div class="tier-meta">
+            <p class="tier-tag">Foundation — Always First</p>
+            <p class="tier-name">Connectivity &amp; Coverage Audit</p>
+          </div>
+          <span class="tier-toggle">▾</span>
+        </div>
+        <div class="tier-body">
+          <div class="tier-body-inner">
+            <p class="tier-desc">
+              Every engagement starts here. Before security monitoring is relevant, your network
+              needs to actually work — at the speed and consistency your ISP is providing.
+              Weak coverage, channel interference, router placement, and ISP equipment issues
+              are common and fixable. We find them first.
+            </p>
+            <div class="tier-services">
+              <div class="tier-service"><span class="tier-service-dot"></span>Throughput testing vs. plan speed</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Wi-Fi channel &amp; interference analysis</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Router placement &amp; coverage mapping</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>ISP equipment assessment</div>
+            </div>
+            <div class="entry-lanes">
+              <div class="lane">
+                <p class="lane-label paid">Paid</p>
+                <p>We perform the full audit, identify issues, and remediate what can be fixed. Hardware recommendations provided in writing.</p>
+              </div>
+              <div class="lane">
+                <p class="lane-label free">Self-Certified</p>
+                <p>If you've already addressed your connectivity, a free review call confirms you're ready to proceed to the next tier.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tier-connector">
+        <div class="tier-connector-inner">
+          <div class="tier-connector-line"></div>
+          <span class="tier-connector-label">UNLOCKS</span>
+          <div class="tier-connector-line-short"></div>
+        </div>
+      </div>
+
+      <div class="tier" id="tier2" onclick="toggleTier('tier2')">
+        <div class="tier-header">
+          <div class="tier-num">02</div>
+          <div class="tier-meta">
+            <p class="tier-tag">Infrastructure Layer</p>
+            <p class="tier-name">Network Infrastructure &amp; Hardening</p>
+          </div>
+          <span class="tier-toggle">▾</span>
+        </div>
+        <div class="tier-body">
+          <div class="tier-body-inner">
+            <p class="tier-desc">
+              With a verified foundation, we build the infrastructure layer tailored to your environment.
+              Services here are mix-and-match based on audit findings — not every client needs every component,
+              but every component builds on the connectivity work that came before.
+            </p>
+            <div class="tier-services">
+              <div class="tier-service"><span class="tier-service-dot"></span>Mesh system design &amp; integration</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Firewall configuration &amp; rule sets</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>VLAN network segmentation</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>VPN implementation &amp; remote access</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Hardware selection &amp; procurement guidance</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Security architecture advising</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tier-connector">
+        <div class="tier-connector-inner">
+          <div class="tier-connector-line"></div>
+          <span class="tier-connector-label">UNLOCKS</span>
+          <div class="tier-connector-line-short"></div>
+        </div>
+      </div>
+
+      <div class="tier" id="tier3" onclick="toggleTier('tier3')">
+        <div class="tier-header">
+          <div class="tier-num">03</div>
+          <div class="tier-meta">
+            <p class="tier-tag">DNS Layer — Strongly Recommended</p>
+            <p class="tier-name">Recursive DNS Deployment</p>
+          </div>
+          <span class="tier-toggle">▾</span>
+        </div>
+        <div class="tier-body">
+          <div class="tier-body-inner">
+            <p class="tier-desc">
+              DNS is the address book of the internet — every connection your devices make starts with a DNS query.
+              Deploying a local recursive resolver means no third-party DNS provider sees your queries,
+              every device on your network is covered whether it wants to be or not, and known-bad domains
+              are blocked before a connection is ever attempted.
+              This tier is a meaningful standalone deployment — and it feeds the NetWatch dashboard
+              with DNS telemetry when Tier 4 follows.
+            </p>
+            <div class="tier-services">
+              <div class="tier-service"><span class="tier-service-dot"></span>Pi-hole network-wide ad &amp; tracker blocking</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Unbound fully recursive resolver</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>DNSSEC validation</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Forced DNS routing — no device bypass</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Query logging &amp; analytics</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Custom blocklist configuration</div>
+            </div>
+            <div class="tier-note">
+              <strong>Note:</strong> Tier 4 (NetWatch) can be deployed without a DNS layer, but the picture
+              it gives you is less complete. DNS telemetry is one of the most revealing data sources in the
+              dashboard — it's what tells you an Echo Dot tried to bypass your resolver 40 times today.
+              We recommend Tier 3 first, but won't force it.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tier-connector">
+        <div class="tier-connector-inner">
+          <div class="tier-connector-line"></div>
+          <span class="tier-connector-label">UNLOCKS</span>
+          <div class="tier-connector-line-short"></div>
+        </div>
+      </div>
+
+      <div class="tier t4" id="tier4" onclick="toggleTier('tier4')">
+        <div class="tier-header">
+          <div class="tier-num">04</div>
+          <div class="tier-meta">
+            <p class="tier-tag">Full Deployment — The NetWatch Platform</p>
+            <p class="tier-name">Heuristic &amp; Signature IDS Monitoring</p>
+          </div>
+          <span class="tier-toggle">▾</span>
+        </div>
+        <div class="tier-body">
+          <div class="tier-body-inner">
+            <p class="tier-desc">
+              NetWatch is a purpose-built <strong>detection platform</strong> — not a prevention system.
+              It passively watches every packet via SPAN port mirroring without sitting inline,
+              meaning it generates no performance impact and cannot intercept, block, or modify traffic.
+              What it does is give you complete visibility into what your network is actually doing:
+              every connection, every external IP, every anomalous behavior pattern — unified in a
+              single operational dashboard alongside your DNS telemetry.
+              You see everything. You own the hardware. The data never leaves your network.
+            </p>
+            <div class="tier-services">
+              <div class="tier-service"><span class="tier-service-dot"></span>Suricata IDS — signature &amp; heuristic detection</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Passive SPAN port monitoring (no inline impact)</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Real-time alert dashboard</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Geographic traffic intelligence</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Device inventory &amp; discovery engine</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>DNS telemetry integration</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Monthly reports — Passive or Active tier</div>
+              <div class="tier-service"><span class="tier-service-dot"></span>Client-owned hardware, full data sovereignty</div>
+            </div>
+            <div class="tier-note-teal">
+              <strong>Detection, not prevention.</strong> NetWatch tells you what's happening —
+              it does not stop it. That's an honest limitation and an important one to understand
+              before deployment. The value is visibility: knowing a device is behaving abnormally,
+              that traffic is going somewhere it shouldn't, that something needs your attention.
+              What happens next is a conversation. Operator-assisted remote response is on the roadmap
+              for clients who want a human in the loop when an alert fires.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-section">
+    <div class="cta-inner">
+      <div>
+        <h2>Not sure <em>where you enter</em> the process?</h2>
+        <p>
+          That's exactly what a free consultation is for. We'll talk through your current setup,
+          what you're trying to protect, and what tier actually makes sense for you —
+          no sales pressure, no commitment.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn-primary">Book a Consultation</a>
+        <p class="cta-email">Or email us directly</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">[NET<span>WATCH</span>]</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why.html">Why NetWatch</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2026 NetWatch — All rights reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    function setTierHeight(tier, open) {
+      const body = tier.querySelector('.tier-body');
+      body.style.maxHeight = open ? body.scrollHeight + 'px' : '0';
+    }
+
+    function toggleTier(id) {
+      const tier = document.getElementById(id);
+      const wasActive = tier.classList.contains('active');
+      document.querySelectorAll('.tier').forEach(t => {
+        t.classList.remove('active');
+        setTierHeight(t, false);
+      });
+      if (!wasActive) {
+        tier.classList.add('active');
+        setTierHeight(tier, true);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      const t1 = document.getElementById('tier1');
+      t1.classList.add('active');
+      setTierHeight(t1, true);
+    });
+
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.nav-hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
+</html>

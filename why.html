@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why It Matters — NetWatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/netwatch.css" />
+
+  <style>
+    /* ── WHY: PROBLEM GRID ── */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .problem-card {
+      background: var(--bg2);
+      padding: 2rem;
+      transition: background 0.2s;
+    }
+
+    .problem-card:hover { background: var(--bg3); }
+
+    .problem-icon {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--amber);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .problem-icon::before { content: '⚠'; font-size: 0.85rem; }
+
+    .problem-card h3 {
+      font-family: var(--head);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.02em;
+    }
+
+    .problem-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── WHY: PAGE HEADER ANIMATIONS ── */
+    .page-eyebrow { animation: fadeUp 0.4s ease both; }
+    .page-header h1 { animation: fadeUp 0.4s 0.08s ease both; }
+    .page-header .lead { animation: fadeUp 0.4s 0.16s ease both; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">[</span>NET<span>WATCH</span><span class="logo-bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="index.html#how-it-works" onclick="toggleMenu()">How It Works</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="contact.html" class="nav-cta" onclick="toggleMenu()">Get Started</a>
+  </div>
+
+  <div class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span style="color: var(--text-muted);">Why It Matters</span>
+    </div>
+    <p class="page-eyebrow">The Problem</p>
+    <h1>Your network is a <em>black box.</em></h1>
+    <p class="lead">
+      Large businesses have dedicated security teams. Enterprise networks have monitoring tools.
+      Your home office has a blinking router and a hope for the best.
+      The gap is real — and the threats are not theoretical.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="problem-grid">
+      <div class="problem-card">
+        <p class="problem-icon">No Visibility</p>
+        <h3>You don't know what's on your network</h3>
+        <p>Smart TVs, thermostats, doorbells, printers — any of them can be compromised.
+           Most home routers cannot tell you they were. A device that joined your network
+           six months ago and has been quietly misbehaving ever since looks identical to one that's fine.</p>
+      </div>
+      <div class="problem-card">
+        <p class="problem-icon">Silent Leakage</p>
+        <h3>Your devices are talking without your permission</h3>
+        <p>Telemetry, fingerprinting, and behavioral tracking happen constantly — from smart TVs,
+           voice assistants, and app-connected appliances. DNS bypass attempts, where devices
+           try to ignore your resolver and phone home directly, are routine.
+           Your router doesn't log it. It doesn't stop it.</p>
+      </div>
+      <div class="problem-card">
+        <p class="problem-icon">Dead Coverage</p>
+        <h3>Connectivity problems mask security ones</h3>
+        <p>A slow or inconsistent network makes it impossible to tell the difference between
+           a congestion issue, a misconfigured device, and something actively wrong.
+           Performance and security are not separate problems — degraded connectivity
+           has to be addressed before monitoring means anything.</p>
+      </div>
+      <div class="problem-card">
+        <p class="problem-icon">No Entry Point</p>
+        <h3>Enterprise solutions are priced out of reach</h3>
+        <p>Managed security providers serve large businesses with dedicated IT budgets.
+           The SOHO market has been left with off-the-shelf gear, a setup manual nobody reads,
+           and the assumption that home networks don't need the same level of care. They do.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="context-block">
+      <p>
+        The most common threats on home and small office networks aren't sophisticated attacks.
+        They're <strong>passive and persistent</strong> — devices that were never properly segmented,
+        DNS queries that were never filtered, traffic that was never inspected. The damage accumulates
+        quietly over months, not in dramatic incidents.
+      </p>
+      <p>
+        NetWatch is a <strong>detection system, not a prevention system.</strong> It does not block
+        traffic, stop attacks, or intervene in connections. What it does is give you
+        <strong>visibility you don't currently have</strong> — a continuous record of what's happening
+        on your network, with alerting when something looks wrong.
+      </p>
+      <p>
+        That distinction matters. A smoke detector doesn't put out the fire — but you can't respond
+        to a fire you don't know is happening. Right now, most home networks have neither the detector
+        nor the extinguisher. NetWatch is the detector. What you do with the alert is the conversation
+        we have next.
+      </p>
+    </div>
+  </section>
+
+  <div class="cta-row">
+    <p>Ready to see what NetWatch looks like for your network?</p>
+    <a href="index.html#how-it-works" class="btn-ghost">See the Process ↓</a>
+    <a href="contact.html" class="btn-primary">Book a Consultation</a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">[NET<span>WATCH</span>]</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why.html">Why NetWatch</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2026 NetWatch — All rights reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.nav-hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
+</html>

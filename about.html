@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — NetWatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/netwatch.css" />
+
+  <style>
+    /* ── ABOUT: LAYOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 4rem;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    /* ── LEFT: IDENTITY ── */
+    .about-identity {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .photo-placeholder-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-placeholder-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--text-dim);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .photo-placeholder-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .identity-name {
+      font-family: var(--head);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .identity-title {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-top: -0.75rem;
+    }
+
+    .identity-location {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .identity-location::before {
+      content: '◎';
+      color: var(--teal-dim);
+      font-size: 0.7rem;
+    }
+
+    /* ── CREDENTIAL BLOCK ── */
+    .credential-block {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .credential-block-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+    }
+
+    .credential-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .credential-list li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .credential-list li::before {
+      content: '▸';
+      color: var(--teal-dim);
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .credential-list li span {
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      display: block;
+      margin-top: 0.15rem;
+    }
+
+    /* ── RIGHT: CONTENT ── */
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      animation: fadeUp 0.4s 0.1s ease both;
+    }
+
+    .about-section-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .about-section-label::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    .about-block h2 {
+      font-family: var(--head);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .about-block h2 em {
+      font-style: normal;
+      color: var(--teal);
+    }
+
+    .about-block p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .about-block p:last-child { margin-bottom: 0; }
+
+    .about-block p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .about-divider {
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── WHAT TO EXPECT ── */
+    .expect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    .expect-card {
+      background: var(--bg2);
+      padding: 1.5rem;
+    }
+
+    .expect-card h3 {
+      font-family: var(--head);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .expect-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* ── CTA ROW ── */
+    .about-cta {
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      padding: 1.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .about-cta p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 0;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .about-cta p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2.5rem 1.5rem 4rem;
+      }
+
+      .about-identity {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .photo-placeholder {
+        width: 120px;
+        aspect-ratio: 1;
+        flex-shrink: 0;
+      }
+
+      .expect-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">[</span>NET<span>WATCH</span><span class="logo-bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="index.html#how-it-works" onclick="toggleMenu()">How It Works</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="contact.html" class="nav-cta" onclick="toggleMenu()">Get Started</a>
+  </div>
+
+  <div style="max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 0;">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span style="color: var(--text-muted);">About</span>
+    </div>
+  </div>
+
+  <div class="about-grid">
+
+    <!-- ── LEFT COLUMN ── -->
+    <div class="about-identity">
+
+      <div class="photo-placeholder">
+        <div class="photo-placeholder-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <p class="photo-placeholder-label">Photo coming soon</p>
+      </div>
+
+      <div>
+        <p class="identity-name">[Your Full Name]</p>
+        <p class="identity-title">Founder — NetWatch</p>
+      </div>
+
+      <p class="identity-location">[City, State]</p>
+
+      <div class="credential-block">
+        <p class="credential-block-label">Background</p>
+        <ul class="credential-list">
+          <li>
+            B.S. Cybersecurity, Data Analytics concentration
+            <span>Conferred 2026</span>
+          </li>
+          <li>
+            Google Cybersecurity Specialization
+          </li>
+          <li>
+            Google Advanced Data Analytics
+          </li>
+          <li>
+            Google IT Support Professional
+          </li>
+          <li>
+            CompTIA / Additional certifications on request
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ── RIGHT COLUMN ── -->
+    <div class="about-content">
+
+      <!-- ORIGIN -->
+      <div class="about-block">
+        <p class="about-section-label">How this started</p>
+        <h2>Built for my own network.<br /><em>Then people started asking.</em></h2>
+        <p>
+          [Origin story placeholder — describe how the homelab project started,
+          what you built, and how client interest emerged organically without any pitching.
+          Keep it honest and direct. Two to three short paragraphs.]
+        </p>
+        <p>
+          The interest was genuine and unsolicited. That matters to me — it means
+          the product earns its place in someone's home on its own merits, not because
+          it was sold to them. That's still how I intend to operate.
+        </p>
+      </div>
+
+      <div class="about-divider"></div>
+
+      <!-- QUALIFICATIONS — translated -->
+      <div class="about-block">
+        <p class="about-section-label">What I've actually built</p>
+        <h2>The same system running <em>on my own network.</em></h2>
+        <p>
+          Everything NetWatch deploys for clients runs on my own hardware at home first.
+          The IDS, the DNS stack, the dashboard, the firewall rules — I live with the data
+          it produces daily. That's not a sales point, it's just how the development worked.
+          Real network, real traffic, real anomalies.
+        </p>
+        <p>
+          I hold a <strong>B.S. in Cybersecurity with a concentration in Data Analytics</strong>,
+          conferred in 2026, alongside several Google professional certifications in cybersecurity,
+          data analytics, and IT support. The academic foundation matters, but the honest reason
+          I can do this work is that I've been doing it — iterating on a live system,
+          troubleshooting real problems, and building tools that have to actually work.
+        </p>
+      </div>
+
+      <div class="about-divider"></div>
+
+      <!-- WHAT TO EXPECT -->
+      <div class="about-block">
+        <p class="about-section-label">What to expect</p>
+        <h2>Small by design. <em>Intentionally.</em></h2>
+        <p>
+          [Work ethic / engagement style placeholder — describe what it's actually like to
+          work with you. Direct communication, no jargon with clients, honest about what
+          the system can and can't do, show up on time, etc. Your words here.]
+        </p>
+        <div class="expect-grid">
+          <div class="expect-card">
+            <h3>In-person only</h3>
+            <p>Every deployment involves an on-site visit. Remote-only setup isn't something I offer — the network has to be seen to be understood.</p>
+          </div>
+          <div class="expect-card">
+            <h3>Limited client capacity</h3>
+            <p>A large roster means diluted attention. The number of active clients I take on at once is deliberate — every network gets a real eye on it.</p>
+          </div>
+          <div class="expect-card">
+            <h3>No jargon</h3>
+            <p>You don't need to know what a SPAN port is to benefit from one. I explain what's relevant in plain language and skip what isn't.</p>
+          </div>
+          <div class="expect-card">
+            <h3>Honest about limitations</h3>
+            <p>NetWatch is a detection system. It doesn't prevent threats. I'll tell you exactly what it does and doesn't do before any commitment is made.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-cta">
+        <p>
+          <strong>Ready to have a conversation?</strong> The free consultation is
+          20–30 minutes — no commitment, no pitch. Just an honest look at your network
+          and whether any of this makes sense for you.
+        </p>
+        <a href="contact.html" class="btn-primary">Get in Touch</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">[NET<span>WATCH</span>]</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why.html">Why NetWatch</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2026 NetWatch — All rights reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.nav-hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
+</html>
