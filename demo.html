@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo | NetWatch</title>
+  <link rel="stylesheet" href="assets/css/netwatch.css" />
+
+  <style>
+    /* ── DEMO: LAYOUT ── */
+    .demo-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+    }
+
+    /* ── VIDEO CONTAINER ── */
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+
+    /* Placeholder shown until video is added */
+    .video-placeholder {
+      aspect-ratio: 16 / 9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background: var(--bg3);
+    }
+
+    .video-placeholder-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 1px solid var(--border2);
+      background: var(--bg2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-placeholder-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--teal-dim);
+      margin-left: 3px;
+    }
+
+    .video-placeholder p {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* Actual video — swap placeholder div for this when ready:
+       <video autoplay muted loop playsinline controls>
+         <source src="assets/video/netwatch-demo.mp4" type="video/mp4" />
+       </video>
+    */
+    .video-wrap video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── FEATURE CALLOUTS ── */
+    .demo-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+
+    .demo-feature {
+      background: var(--bg2);
+      padding: 1.5rem;
+    }
+
+    .demo-feature-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .demo-feature h3 {
+      font-family: var(--head);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .demo-feature p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── DISCLAIMER ── */
+    .demo-disclaimer {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      line-height: 1.7;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      margin-bottom: 2rem;
+    }
+
+    .demo-disclaimer strong {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="logo-bracket">[</span>NET<span>WATCH</span><span class="logo-bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="why.html">Why NetWatch?</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="index.html#how-it-works" onclick="toggleMenu()">How It Works</a>
+    <a href="why.html" onclick="toggleMenu()">Why NetWatch?</a>
+    <a href="about.html" onclick="toggleMenu()">About</a>
+    <a href="contact.html" class="nav-cta" onclick="toggleMenu()">Get Started</a>
+  </div>
+
+  <div style="max-width: 900px; margin: 0 auto; padding: 2rem 2rem 0;">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <a href="services.html">Services</a>
+      <span>/</span>
+      <span style="color: var(--text-muted);">Demo</span>
+    </div>
+  </div>
+
+  <div class="page-header" style="max-width: 900px;">
+    <p class="page-eyebrow">Platform Demo</p>
+    <h1>See what <em>NetWatch actually looks like.</em></h1>
+    <p class="lead">
+      A walkthrough of the NetWatch dashboard on a live deployment:
+      device activity, alert feed, geographic traffic, and DNS telemetry,
+      all in a single operational view. Data shown is from a real network
+      with all identifying information removed.
+    </p>
+  </div>
+
+  <div class="divider-full"></div>
+
+  <div class="demo-content">
+
+    <div class="demo-disclaimer">
+      <strong>About this recording:</strong> All IP addresses, device names, domain names,
+      and geographic data shown are from a sanitized real deployment.
+      No client network data is used. MAC addresses and hostnames have been anonymized.
+    </div>
+
+    <!-- VIDEO — replace .video-placeholder div with <video> tag when recording is ready -->
+    <div class="video-wrap">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="5,3 19,12 5,21"/>
+          </svg>
+        </div>
+        <p>Demo recording coming soon</p>
+      </div>
+    </div>
+
+    <!-- WHAT YOU'RE SEEING -->
+    <div class="demo-features">
+      <div class="demo-feature">
+        <p class="demo-feature-label">Alert Feed</p>
+        <h3>Signature & Anomaly Alerts</h3>
+        <p>Real-time feed of Suricata signature matches alongside heuristic anomaly
+           flags; both detection layers in a single unified view, severity-ranked
+           and timestamped.</p>
+      </div>
+      <div class="demo-feature">
+        <p class="demo-feature-label">Geographic Intelligence</p>
+        <h3>Connection Mapping</h3>
+        <p>Every external connection resolved to country, city, and threat
+           classification. Connection volume, protocol breakdown, and per-IP
+           investigation; all resolved locally, no external API.</p>
+      </div>
+      <div class="demo-feature">
+        <p class="demo-feature-label">DNS Telemetry</p>
+        <h3>Per-Device Query History</h3>
+        <p>90-day query log across every device on the network. Blocked domains,
+           NXDOMAIN spikes, bypass attempts, and anomalous query volume,
+           surfaced per device.</p>
+      </div>
+      <div class="demo-feature">
+        <p class="demo-feature-label">Device Inventory</p>
+        <h3>Network Discovery</h3>
+        <p>Every device that has appeared on the network: first seen, last seen,
+           protocol activity, and alert history. Unknown devices flagged
+           automatically.</p>
+      </div>
+    </div>
+
+    <div class="cta-row" style="padding: 1rem 0 0; max-width: 100%;">
+      <p>Want to talk through what this looks like on your network?</p>
+      <a href="services.html" class="btn-ghost">View Services</a>
+      <a href="contact.html" class="btn-primary">Book a Consultation</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">[NET<span>WATCH</span>]</span>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why.html">Why NetWatch</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2026 NetWatch | All rights reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.nav-hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
+</html>
