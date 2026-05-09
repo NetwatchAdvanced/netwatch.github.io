@@ -390,18 +390,23 @@
       body.style.maxHeight = open ? body.scrollHeight + 'px' : '0';
     }
 
-    function toggleTier(id) {
-      const tier = document.getElementById(id);
-      const wasActive = tier.classList.contains('active');
-      document.querySelectorAll('.tier').forEach(t => {
-        t.classList.remove('active');
-        setTierHeight(t, false);
-      });
-      if (!wasActive) {
-        tier.classList.add('active');
-        setTierHeight(tier, true);
-      }
-    }
+  function toggleTier(id) {
+  const tier = document.getElementById(id);
+  const wasActive = tier.classList.contains('active');
+  document.querySelectorAll('.tier').forEach(t => {
+    t.classList.remove('active');
+    setTierHeight(t, false);
+  });
+  if (!wasActive) {
+    tier.classList.add('active');
+    setTierHeight(tier, true);
+    setTimeout(() => {
+      const offset = 80;
+      const top = tier.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 50);
+  }
+}
 
     window.addEventListener('DOMContentLoaded', function() {
       const t1 = document.getElementById('tier1');
