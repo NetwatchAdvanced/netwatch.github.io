@@ -398,13 +398,11 @@ function toggleTier(id) {
     setTierHeight(t, false);
   });
   if (!wasActive) {
-    // Capture position BEFORE expansion
-    const offset = 80;
-    const top = tier.getBoundingClientRect().top + window.scrollY - offset;
     tier.classList.add('active');
     setTierHeight(tier, true);
-    // Scroll to captured position
-    window.scrollTo({ top, behavior: 'smooth' });
+    setTimeout(() => {
+      tier.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 460);
   }
 }
 
