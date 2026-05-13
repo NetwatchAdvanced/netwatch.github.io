@@ -43,9 +43,11 @@ function injectNav(activePage) {
     `    <a href="${link.href}" onclick="toggleMenu()">${link.label}</a>`
   ).join('\n');
 
-  // Nav goes inside the container
-  container.innerHTML = `
-  <nav>
+  // Build nav as a real element — NOT injected inside the placeholder div.
+  // position:sticky requires the nav to be a direct body-level element.
+  // If wrapped in #site-nav (64px tall), sticky range is zero and it never sticks.
+  const temp = document.createElement('div');
+  temp.innerHTML = `<nav>
     <a href="index.html" class="nav-logo">
       <span class="logo-bracket">[</span>NET<span>WATCH</span><span class="logo-bracket">]</span>
     </a>
@@ -58,9 +60,13 @@ ${desktopLinks}
     </button>
   </nav>`;
 
-  // Mobile menu injected as sibling AFTER site-nav, not inside it
-  // Keeps it out of site-nav's stacking context so z-index works correctly
-  container.insertAdjacentHTML('afterend', `
+  const navEl = temp.firstElementChild;
+
+  // Replace placeholder div with the actual nav element
+  container.replaceWith(navEl);
+
+  // Mobile menu injected as sibling after nav
+  navEl.insertAdjacentHTML('afterend', `
   <div class="mobile-menu" id="mobileMenu">
 ${mobileLinks}
     <a href="contact.html" class="nav-cta" onclick="toggleMenu()">Get Started</a>
