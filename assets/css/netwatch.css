@@ -77,6 +77,12 @@ body::after {
   z-index: 1;
 }
 
+/* html and body must be position:static — position:relative on these
+   elements interferes with sticky positioning across all pages */
+html, body {
+  position: static;
+}
+
 
 /* ── NAVIGATION ── */
 #site-nav {
