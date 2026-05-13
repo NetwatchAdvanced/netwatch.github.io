@@ -79,6 +79,11 @@ body::after {
 
 
 /* ── NAVIGATION ── */
+#site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 nav {
   position: sticky;
   top: 0;
