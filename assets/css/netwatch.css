@@ -78,6 +78,12 @@ body::after {
 }
 
 
+/* Keeps primary nav above page content and secondary sticky navs */
+#site-nav {
+  z-index: 200;
+}
+
+
 /* ── NAVIGATION ── */
 nav {
   position: sticky;
