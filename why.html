@@ -5,7 +5,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; worker-src 'self' blob:;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why It Matters | NetWatch</title>
+  <title>Why It Matters | NetWatch Advanced</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/netwatch.css" />
@@ -35,11 +35,10 @@
     <p class="page-eyebrow">The Problem</p>
     <h1>Your network is a <em>black box.</em></h1>
     <p class="lead">
-      Large businesses have dedicated security teams. Enterprise networks have monitoring tools.
-      Your home office has a blinking light on a modem or router and a hope for the best.
-      That gap is real and the threats are not theoretical. In this day and age, cyberattacks are no longer
-      relegated to Enterprises or Government entities, but also at Small Office Home Office (SOHO) users and it
-      is more important than ever to take control of your security and privacy on the internet.
+      Enterprises have dedicated security teams, monitoring tools, and a helpdesk to call.
+      Independent businesses have a router from the ISP and a hope that nothing goes wrong.
+      That gap is real, the threats are not theoretical, and the absence of support options
+      at this market segment is exactly the problem we are here to address.
     </p>
   </div>
 
@@ -50,53 +49,51 @@
       <div class="problem-card">
         <p class="problem-icon">No Visibility</p>
         <h3>You don't know what's on your network</h3>
-        <p>Smart TVs, thermostats, doorbells, printers and more exist on your network, and unfortunately any of them can be compromised.
-           Most home routers cannot tell you they were. A device that joined your network
-           six months ago and has been quietly misbehaving ever since looks identical to one that's fine.</p>
+        <p>POS terminals, staff devices, security cameras, smart TVs, and guest connections all
+           share your infrastructure. Any of them can be compromised. Without visibility into
+           what's connected and what it's doing, a device that's been quietly misbehaving
+           for months looks identical to one that's fine.</p>
+      </div>
+      <div class="problem-card">
+        <p class="problem-icon">Compliance Exposure</p>
+        <h3>A flat network with a POS system is a PCI violation waiting to happen</h3>
+        <p>PCI-DSS requires strict segmentation between payment processing systems and
+           all other network traffic. Most independent business networks are completely flat,
+           meaning your POS terminal and guest WiFi share the same infrastructure. That
+           is not a security opinion, it is a compliance gap with real liability attached.</p>
       </div>
       <div class="problem-card">
         <p class="problem-icon">Silent Leakage</p>
         <h3>Your devices are talking without your permission</h3>
-        <p>Telemetry, fingerprinting, and behavioral tracking happen constantly: from smart TVs,
-           voice assistants, and app-connected appliances. DNS bypass attempts, where devices
-           try to ignore your resolver and phone home directly, are becoming more and more common.
-           Your router doesn't log it and unless configured properly, it certainly doesn't stop it.</p>
+        <p>Telemetry, fingerprinting, and behavioral tracking happen constantly across
+           network-connected devices. DNS bypass attempts, where devices try to ignore
+           your resolver and phone home directly, are increasingly common. Your router
+           doesn't log it and unless configured properly, it doesn't stop it either.</p>
       </div>
       <div class="problem-card">
-        <p class="problem-icon">Dead Coverage</p>
-        <h3>Connectivity problems mask security ones</h3>
-        <p>A slow or inconsistent network makes it impossible to tell the difference between
-           a congestion issue, a misconfigured device, versus something actively wrong.
-           Performance and security are not separate problems, and degraded connectivity
-           has to be addressed before monitoring can be effective and truly mean anything.</p>
-      </div>
-      <div class="problem-card">
-        <p class="problem-icon">No Entry Point</p>
-        <h3>Enterprise solutions are priced out of reach</h3>
-        <p>Managed security providers (MSPs) serve large businesses who have dedicated IT budgets.
-           The SOHO market has been left with off-the-shelf gear, a setup manual nobody reads,
-           and the assumption that home networks don't need the same level of care. But they do. Particularly
-           with the prevalence of Work From Home/hybrid/remote styles of work, more and more home users have important
-           assets that need to be protected, and privacy in general is increasing in priority for many people!</p>
+        <p class="problem-icon">No Support Options</p>
+        <h3>MSPs have client minimums that most independent businesses don't meet</h3>
+        <p>Managed service providers are built around enterprise accounts. Their pricing,
+           contracts, and minimum requirements consistently price out the independent
+           business owner who needs help just as much. You've been left with consumer-grade
+           gear and the assumption that your network doesn't need professional attention. It does.</p>
       </div>
       <div class="problem-card">
         <p class="problem-icon">No Segmentation</p>
         <h3>Every device on your network trusts every other</h3>
-        <p>A typical home network is flat, which means your laptop, smart TV, thermostat,
-           and security camera all share the same network, with no boundaries between them.
-           If <u>one</u> device is compromised, everything else is reachable from it and Internet of Things (IoT)
-           devices are particularly vulnerable. SentinelOne has a solid article about IoT security <a href="https://www.sentinelone.com/cybersecurity-101/data-and-ai/iot-security-risks/">here</a>.
-           Containment requires segmentation which most home routers do not provide, and can only be achieved through
-           careful configuration.</p>
+        <p>A typical business network is flat: POS terminals, staff laptops, security cameras,
+           and guest WiFi all share the same infrastructure with no boundaries between them.
+           If one device is compromised, everything else is reachable from it.
+           Containment requires segmentation, which most business routers require
+           deliberate configuration to achieve.</p>
       </div>
       <div class="problem-card">
         <p class="problem-icon">No Records or Logging</p>
         <h3>When something goes wrong, there's no timeline</h3>
-        <p>Most people discover a network compromise from their bank, an email provider,
-           or a password reset that they didn't request, not from their own network and at that point the damage has already
-           been done and you are playing catch-up!
-           Without logging, there's no way to know when an issue started, what assets were potentially accessed,
-           or how long this was happening. No record of course means no response.</p>
+        <p>Most businesses discover a network compromise from their bank, a payment
+           processor, or a breach notification, not from their own network. By then the
+           damage is done. Without logging there's no way to know when an issue started,
+           what was accessed, or how long it had been happening. No record means no response.</p>
       </div>
     </div>
   </section>
@@ -105,73 +102,71 @@
 
   <section class="section">
     <div class="context-block">
-      <h3>SOHO Network Visibility</h3>
+      <h3>Independent Business Network Security</h3>
       <p>
-        The most common threats on home and small office networks aren't sophisticated attacks.
-        They're <strong>passive and persistent</strong>; devices that were never properly segmented,
+        The most common threats on independent business networks aren't sophisticated targeted attacks.
+        They're <strong>passive and persistent</strong>: devices that were never properly segmented,
         DNS queries that were never filtered, traffic that was never inspected. The damage accumulates
-        quietly over months, not typically in dramatic incidents. For example, one TV stick on my network
-        was creating over 1,000 DNS requests per day in attempts to send telemetry data about my equipment, network,
-        habits and other information back home to be collected, stored, and likely sold. All without my permission, and
-        without NetWatch I had no ability to identify these behaviors, so that I could stop that from happening.
+        quietly over months, not in dramatic incidents. A single network-connected device sending
+        telemetry data home hundreds of times per day does so entirely without your knowledge
+        unless something is watching.
       </p>
       <p>
-        NetWatch is a <strong>detection system, not a prevention system.</strong> It does not block
+        NetWatch Advanced is a <strong>detection system, not a prevention system.</strong> It does not block
         traffic, stop attacks, or intervene in connections. What it does is give you
-        <strong>visibility you don't currently have</strong>, which is a continuous record of what's happening
-        on your network, with alerting taking place when something looks wrong.
+        <strong>visibility you don't currently have</strong>: a continuous record of what's happening
+        on your network, with alerting when something looks wrong.
       </p>
       <p>
-        That distinction matters. A smoke detector doesn't put out the fire, but you can't respond
-        to a fire that you don't know is happening. Right now, most home networks have neither the detector
-        nor the extinguisher. NetWatch is that detector and what to do with the alert is the conversation
-        we have next.
+        That distinction matters. A smoke detector doesn't put out the fire, but you cannot respond
+        to a fire you don't know is happening. Right now, most independent business networks have
+        neither the detector nor anyone to call. NetWatch Advanced is both.
       </p>
     </div>
 
     <div class="context-block">
-      <h3>Security Products</h3>
+      <h3>Why Not Just Buy a Security Product?</h3>
       <p>
-        To be clear, consumer network security products do exist. <strong>Firewalla, Eero Secure,
+        Consumer network security products do exist. <strong>Firewalla, Eero Secure,
         Netgear Armor</strong> are legitimate tools that provide a meaningful
-        baseline for households that want something over nothing. However, they are one-size-fits all and place all of the onus on you, the user.
+        baseline for someone who wants something over nothing. But they are one-size-fits-all
+        and place the entire burden of deployment and interpretation on you, the owner.
       </p>
       <p>
-        What they are, without exception, is <strong>products.</strong> You research them, you buy them,
-        you install them yourself, you interpret the alerts yourself, and when something
-        looks wrong you spend hours trying to find an accurate answer. The detection they provide is largely
-        signature-based which means only known threats, known patterns, and known bad actors.
+        What they are, without exception, is <strong>products.</strong> You research them, buy them,
+        install them yourself, interpret the alerts yourself, and when something looks wrong
+        you spend hours trying to find an accurate answer. The detection they provide is largely
+        signature-based: only known threats, known patterns, and known bad actors.
         If it's in the database, it gets flagged. If it isn't, it doesn't.
       </p>
       <p>
-        NetWatch deploys a <strong>two-layer detection model.</strong> Suricata's
+        NetWatch Advanced deploys a <strong>two-layer detection model.</strong> Suricata's
         signature engine catches known threats against a continuously updated ruleset.
-        The proprietary heuristic layer catches everything else, based on behavioral deviations from your
-        network's established baseline that don't match any particular external signature and so they aren't limited in that way.
-        A device that suddenly triples its outbound connections at 2am is flagged
-        not because it matches a known pattern, but because it doesn't match
-        <em>your</em> pattern. That behavior is truly important and is what sets NetWatch apart! It is truly
-        a custom approach to security and privacy, that is specific to <em>your</em> network and activity.
+        The proprietary heuristic layer catches everything else, based on behavioral
+        deviations from your network's established baseline. A device that suddenly
+        triples its outbound connections at 2am is flagged not because it matches a known
+        pattern, but because it doesn't match <em>your</em> pattern. That distinction
+        is what makes it genuinely useful rather than just another alert feed to ignore.
       </p>
       <p>
-        It also comes with a human. Every NetWatch deployment is preceded by a
-        connectivity and coverage audit, configured specifically for your hardware
-        and environment, and with the appropriate Tier is supported by direct access to the operator who built
-        and deployed the system. When you have a question, you're not opening a
-        ticket with a support team in a timezone you've never been to, instead
-        <strong>you're contacting the person who was in your home, knows your
-        network, and has been helping you protect it since day one.</strong>
+        It also comes with a human. Every deployment is preceded by a connectivity and
+        coverage audit, configured specifically for your hardware and environment, and
+        supported by direct access to the person who built and deployed the system.
+        When you have a question, you're not opening a ticket with a support team
+        in a timezone you've never been to. <strong>You're contacting the person
+        who was in your building, knows your network, and has been watching it
+        since day one.</strong>
       </p>
       <p>
         That combination of heuristic and signature detection, purpose-built deployment,
         and a direct operator relationship doesn't exist as an off-the-shelf product.
-        It exists as a service. That's what NetWatch is, and what makes it special.
+        It exists as a service. That's what NetWatch Advanced is, and what makes it different.
       </p>
     </div>
   </section>
 
   <div class="cta-row">
-    <p>Ready to see what NetWatch looks like for your network?</p>
+    <p>Ready to see what NetWatch Advanced looks like for your business?</p>
     <a href="index.html#how-it-works" class="btn-ghost">See the Process ↓</a>
     <a href="contact.html" class="btn-primary">Book a Consultation</a>
   </div>
